@@ -5,14 +5,18 @@ function CircularList (data) {
   if (!data) {
     this.pointer = null;
     this.data = [];
+
+    return this;
   }
-  else if (!Array.isArray(data)) {
+
+  if (!Array.isArray(data)) {
     throw new Error('data parameter must be an array');
   }
-  else {
-    this.pointer = null;
-    this.data = data;
-  }
+
+  this.pointer = null;
+  this.data = data;
+
+  return this;
 }
 
 /**
@@ -21,20 +25,23 @@ function CircularList (data) {
 CircularList.prototype.iterate = function () {
   if (this.pointer === null) {
     this.pointer = 0;
-  }
-  else {
-    this.pointer++;
 
-    if (this.pointer >= this.getSize()) {
-      this.rewind();
-    }
+    return this;
   }
+
+  this.pointer++;
+
+  if (this.pointer >= this.getSize()) {
+    this.rewind();
+  }
+
+  return this;
 };
 /**
  * Iterates the pointer of the list forward
  */
 CircularList.prototype.forward = function () {
-  this.iterate();
+  return this.iterate();
 };
 
 /**
@@ -43,14 +50,17 @@ CircularList.prototype.forward = function () {
 CircularList.prototype.backward = function () {
   if (this.pointer === null) {
     this.end();
-  }
-  else {
-    this.pointer--;
 
-    if (this.pointer < 0) {
-      this.end();
-    }
+    return this;
   }
+
+  this.pointer--;
+
+  if (this.pointer < 0) {
+    this.end();
+  }
+
+  return this;
 };
 
 /**
@@ -58,6 +68,8 @@ CircularList.prototype.backward = function () {
  */
 CircularList.prototype.rewind = function () {
   this.pointer = null;
+
+  return this;
 };
 
 /**
@@ -65,6 +77,8 @@ CircularList.prototype.rewind = function () {
  */
 CircularList.prototype.end = function () {
   this.pointer = this.data.length - 1;
+
+  return this;
 };
 
 /**
@@ -83,6 +97,7 @@ CircularList.prototype.getCurrent = function () {
   if (this.pointer >= this.data.length) {
     return null;
   }
+
   return this.data[this.pointer];
 };
 
@@ -110,6 +125,8 @@ CircularList.prototype.getPrevious = function () {
  */
 CircularList.prototype.add = function (value) {
   this.data.push(value);
+
+  return this;
 };
 
 /**
@@ -125,6 +142,7 @@ CircularList.prototype.remove = function (value) {
       this.rewind();
     }
   }
+  return this;
 };
 
 module.exports = CircularList;
