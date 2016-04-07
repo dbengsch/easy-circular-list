@@ -130,9 +130,9 @@ CircularList.prototype.add = function (value) {
  * @param value
  */
 CircularList.prototype.remove = function (value) {
-  var index;
-  if ((index = this.data.indexOf(value)) !== -1) {
-    this.data = this.data.slice (index, 1);
+  var index = this.data.indexOf(value);
+  if (index !== -1) {
+    this.data.splice(index, 1);
 
     if (this.pointer >= this.getSize()) {
       this.rewind();
