@@ -5,8 +5,6 @@ function CircularList (data) {
   if (!data) {
     this.pointer = null;
     this.data = [];
-
-    return this;
   }
 
   if (!Array.isArray(data)) {
