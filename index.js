@@ -6,15 +6,13 @@ function CircularList (data) {
     this.pointer = null;
     this.data = [];
   }
-
-  if (!Array.isArray(data)) {
+  else if (!Array.isArray(data)) {
     throw new Error('data parameter must be an array');
   }
-
-  this.pointer = null;
-  this.data = data;
-
-  return this;
+  else {
+    this.pointer = null;
+    this.data = data;
+  }
 }
 
 /**
