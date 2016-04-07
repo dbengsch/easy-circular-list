@@ -28,7 +28,7 @@ CircularList.prototype.iterate = function () {
   this.pointer++;
 
   if (this.pointer >= this.getSize()) {
-    this.rewind();
+    this.pointer = 0;
   }
 
   return this;
