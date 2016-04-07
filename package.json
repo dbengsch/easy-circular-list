@@ -1,6 +1,6 @@
 {
   "name": "easy-circular-list",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "An easy circular list",
   "main": "index.js",
   "scripts": {
