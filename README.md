@@ -4,10 +4,16 @@ h2. Why yet another one ?
 
 I needed to have an iteratable list with not too crappy performances; searched, found nothing, did it myself.
 
+h2. Install
+
+```
+npm install easy-circular-list
+```
+
 h2. Start
 
 ```
-var CircularList = require('circular-list');
+var CircularList = require('easy-circular-list');
 var data = [1, 2, 3];
 
 var myList = new CircularList(data);
