@@ -3,14 +3,14 @@
  */
 function CircularList (data) {
   if (!data) {
-    this.pointer = 0;
+    this.pointer = null;
     this.data = [];
   }
   else if (!Array.isArray(data)) {
     throw new Error('data parameter must be an array');
   }
   else {
-    this.pointer = 0;
+    this.pointer = null;
     this.data = data;
   }
 }
@@ -19,9 +19,15 @@ function CircularList (data) {
  * Iterates the pointer of the list forward
  */
 CircularList.prototype.iterate = function () {
-  this.pointer++;
-  if (this.pointer >= this.getSize()) {
-    this.rewind();
+  if (this.pointer === null) {
+    this.pointer = 0;
+  }
+  else {
+    this.pointer++;
+
+    if (this.pointer >= this.getSize()) {
+      this.rewind();
+    }
   }
 };
 /**
@@ -35,9 +41,15 @@ CircularList.prototype.forward = function () {
  * Iterates the pointer of the list backward
  */
 CircularList.prototype.backward = function () {
-  this.pointer--;
-  if (this.pointer < 0) {
+  if (this.pointer === null) {
     this.end();
+  }
+  else {
+    this.pointer--;
+
+    if (this.pointer < 0) {
+      this.end();
+    }
   }
 };
 
@@ -45,7 +57,7 @@ CircularList.prototype.backward = function () {
  * Iterates to the first element
  */
 CircularList.prototype.rewind = function () {
-  this.pointer = 0;
+  this.pointer = null;
 };
 
 /**
