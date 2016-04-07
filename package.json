@@ -1,6 +1,6 @@
 {
   "name": "easy-circular-list",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "An easy circular list",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/dbengsch/circular-list/issues"
   },
-  "homepage": "https://github.com/dbengsch/circular-list#readme"
+  "homepage": "https://github.com/dbengsch/circular-list#readme",
+  "tonicExampleFilename": "example.js"
 }
