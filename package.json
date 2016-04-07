@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/dbengsch/circular-list/issues"
   },
-  "homepage": "https://github.com/dbengsch/circular-list#readme"
+  "homepage": "https://github.com/dbengsch/circular-list#readme",
+  "tonicExampleFilename": "example.js"
 }
