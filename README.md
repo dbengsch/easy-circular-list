@@ -2,7 +2,7 @@ h1. A simple circular list implementation for Javascript
 
 h2. Why yet another one ?
 
-I needed to have an iteratable list with not too crappy performances; searched, found nothing, did it myself.
+I needed to have an iterable list with not too crappy performances; searched, found nothing, did it myself.
 
 h2. Install
 
@@ -10,28 +10,61 @@ h2. Install
 npm install easy-circular-list
 ```
 
-h2. Start
+h2. Start to use
 
 ```
 var CircularList = require('easy-circular-list');
 var data = [1, 2, 3];
 
-var myList = new CircularList(data);
+var list = new CircularList(data);
 ```
 
-h2. API
+h2. Functions
 
-CircularList.prototype.iterate = function ()
-CircularList.prototype.forward = function ()
-CircularList.prototype.backward = function ()
-CircularList.prototype.rewind = function ()
-CircularList.prototype.end = function ()
-CircularList.prototype.getSize = function ()
-CircularList.prototype.getCurrent = function ()
-CircularList.prototype.getNext = function ()
-CircularList.prototype.getPrevious = function ()
-CircularList.prototype.add = function (value)
-CircularList.prototype.remove = function (value)
+
+h3. list.iterate()
+
+Iterates the pointer of the list forward
+
+h3. list.forward()
+
+Iterates the pointer of the list forward
+
+h3. list.backward()
+
+Iterates the pointer of the list backward
+
+h3. list.rewind()
+
+Iterates to the first element
+
+h3. list.end()
+
+Iterates to the end of the list
+
+h3. list.getSize()
+
+Returns list size
+
+h3. list.getCurrent()
+
+Returns current value
+
+h3. list.getNext()
+
+Iterates to next and returns the value
+
+h3. list.getPrevious()
+
+Iterates to previous and returns the value
+
+h3. list.add(value)
+
+Adds a value to the list
+
+h3. list.remove(value)
+
+Removes a value from the list, updates the pointer accordingly
 
 h2. LICENSE
 
