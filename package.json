@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dbengsch/circular-list.git"
+    "url": "git+https://github.com/dbengsch/easy-circular-list.git"
   },
   "keywords": [
     "javascript",
