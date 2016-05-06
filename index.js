@@ -19,6 +19,10 @@ function CircularList (data) {
  * Iterates the pointer of the list forward
  */
 CircularList.prototype.iterate = function () {
+  if (this.getSize() === 0) {
+    return this;
+  }
+
   if (this.pointer === null) {
     this.pointer = 0;
 
@@ -44,6 +48,10 @@ CircularList.prototype.forward = function () {
  * Iterates the pointer of the list backward
  */
 CircularList.prototype.backward = function () {
+  if (this.getSize() === 0) {
+    return this;
+  }
+
   if (this.pointer === null) {
     this.end();
 
@@ -90,11 +98,23 @@ CircularList.prototype.getSize = function () {
  * @returns {*}
  */
 CircularList.prototype.getCurrent = function () {
-  if (this.pointer >= this.data.length) {
+  if (this.pointer >= this.data.length || this.pointer === null) {
     return null;
   }
 
   return this.data[this.pointer];
+};
+
+/**
+ * Returns first value
+ * @returns {*}
+ */
+CircularList.prototype.getFirst = function () {
+  if (this.getSize() === 0) {
+    return null;
+  }
+
+  return this.data[0];
 };
 
 /**
