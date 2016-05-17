@@ -57,6 +57,10 @@ Iterates to next and returns the value
 
 Iterates to previous and returns the value
 
+### list.getArray()
+
+Returns an array representation of the list
+
 ### list.add(value)
 
 Adds a value to the list

@@ -37,6 +37,7 @@ CircularList.prototype.iterate = function () {
 
   return this;
 };
+
 /**
  * Iterates the pointer of the list forward
  */
@@ -132,6 +133,14 @@ CircularList.prototype.getNext = function () {
 CircularList.prototype.getPrevious = function () {
   this.backward();
   return this.getCurrent();
+};
+
+/**
+ * Returns an array representation of the list
+ * @returns {Array}
+ */
+CircularList.prototype.getArray = function () {
+  return this.data;
 };
 
 /**
