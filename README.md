@@ -1,8 +1,4 @@
-# A simple circular list implementation for Javascript
-
-## Why yet another one ?
-
-I needed to have an iterable list with not too crappy performances; searched, found nothing, did it myself.
+# A bad but useful circular list for Javascript
 
 ## Install it
 
